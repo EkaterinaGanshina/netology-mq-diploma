@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
     min-width: 300px;
@@ -41,14 +41,14 @@ ol {
 }
 
 .site-header::after {
-    content: '';
+    content: "";
     background-color: #0a0e34;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .site-header .logo-container,
@@ -62,16 +62,9 @@ ol {
     margin-bottom: 60px;
 }
 
-.logo {
+.logo-text-container img {
     display: block;
     margin: 0 auto;
-}
-
-.logo > g {
-    fill: #ffffff;
-}
-
-.logo-text {
     width: 41.5%;
     min-width: 133px;
     max-width: 180px;
@@ -110,15 +103,23 @@ ol {
     max-width: 320px;
 }
 
-.link-btn .link-icon {
-    fill: #ffffff;
-    width: auto;
-    height: 24px;
-    margin-right: 6px;
+.link-btn .link-sign {
+    padding-left: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.link-btn.app-store .link-sign {
+    background: url("../images/svg/apple_logo.svg") no-repeat left center;
+}
+
+.link-btn.google-play .link-sign {
+    background: url("../images/svg/google-play.svg") no-repeat left center;
 }
 
 .link-btn strong {
     display: block;
+    font-weight: 700;
 }
 
 .section-steps .section-heading {
@@ -128,7 +129,7 @@ ol {
 }
 
 .section-steps .section-heading::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 80px;
     left: 0;
@@ -163,7 +164,7 @@ ol {
 }
 
 .steps-counter::after {
-    content: '';
+    content: "";
     background-color: #5e42b0;
     width: 1.28em;
     height: 4px;
@@ -210,12 +211,12 @@ ol {
 
 .athletes .section-heading::after {
     height: 281px; /* высота фоновой картинки */
-    background: url('../images/footballer_192.png') no-repeat center;
+    background: url("../images/footballer_192.png") no-repeat center;
 }
 
 .players .section-heading::after {
     height: 248px; /* высота фоновой картинки */
-    background: url('../images/basketballer_302.png') no-repeat center;
+    background: url("../images/basketballer_302.png") no-repeat center;
 }
 
 .action-description {
@@ -255,7 +256,7 @@ ol {
 }
 
 .actions-counter::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 42px;
     left: 50%;
@@ -278,14 +279,14 @@ ol {
 }
 
 .site-footer::after {
-    content: '';
+    content: "";
     background-color: #0a0e34;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .footer-logo,
@@ -306,7 +307,8 @@ ol {
     margin: 0 auto;
 }
 
-.footer-logo .logo {
+.footer-logo img {
+    display: block;
     width: 100%;
     height: auto;
     filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
