@@ -54,13 +54,9 @@ ol {
 }
 
 .site-header {
-    height: 568px;
     background: #0a0e34 url("../images/football_767.jpg") no-repeat top / cover;
     position: relative;
     padding: 33px 20px 84px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .site-header::after {
@@ -74,15 +70,16 @@ ol {
     opacity: 0.9;
 }
 
-.site-header .logo-container,
+.logo-container,
+.logo-text-container,
 .site-title,
 .links-container {
     position: relative;
     z-index: 1;
 }
 
-.site-header .logo-container {
-    margin-bottom: 60px;
+.site-header .logo-text-container {
+    margin-bottom: 128px;
 }
 
 .logo-text-container img {
@@ -113,6 +110,10 @@ ol {
     word-spacing: 1px;
 }
 
+.site-header .links-container {
+    margin-top: 84px;
+}
+
 .link-btn {
     display: flex;
     align-items: center;
@@ -122,7 +123,7 @@ ol {
     color: #ffffff;
     font-size: 8px;
     padding: 0.75em 6.25em 0.75em 10em;
-    margin-top: 1.75em;
+    margin-top: 1.875em;
     max-width: 320px;
 }
 
@@ -145,25 +146,16 @@ ol {
     font-weight: 700;
 }
 
-.section-steps .section-heading {
-    padding: 8px 20px;
-    margin-bottom: 215px;
+.section-steps {
     position: relative;
 }
 
-.section-steps .section-heading::after {
-    content: "";
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-}
-
-.section-steps .section-heading h2 {
+.section-steps h2 {
     color: #e7e7e7;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 50px;
+    padding: 8px 20px 4px;
 }
 
 .section-steps h3 {
@@ -173,7 +165,7 @@ ol {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 23px;
-    margin-bottom: 0.78em;
+    margin-bottom: 0.77em;
     letter-spacing: 0.045em;
 }
 
@@ -197,10 +189,14 @@ ol {
     left: 0;
 }
 
+.section-steps .steps {
+    margin-top: 215px;
+}
+
 .section-steps .content {
     font-size: 15px;
     line-height: 1.2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.048em;
 }
 
 .section-steps .step {
@@ -208,7 +204,7 @@ ol {
 }
 
 .section-steps .step.connection {
-    padding-top: 82px;
+    padding-top: 86px;
     background-color: #fafafa;
 }
 
@@ -232,14 +228,10 @@ ol {
     background-color: #ffffff;
 }
 
-.athletes .section-heading::after {
-    height: 281px; /* высота фоновой картинки */
-    background: url("../images/footballer_192.png") no-repeat center;
-}
-
-.players .section-heading::after {
-    height: 248px; /* высота фоновой картинки */
-    background: url("../images/basketballer_302.png") no-repeat center;
+.section-steps .section-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .action-description {
@@ -313,9 +305,7 @@ ol {
 }
 
 .footer-logo,
-.footer-text,
-.links-container,
-.logo-text-container {
+.footer-text {
     position: relative;
     z-index: 1;
 }
