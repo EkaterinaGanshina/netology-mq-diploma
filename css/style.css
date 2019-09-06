@@ -53,10 +53,22 @@ ol {
     height: auto;
 }
 
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.partial-container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .site-header {
     background: #0a0e34 url("../images/football_767.jpg") no-repeat top / cover;
     position: relative;
-    padding: 33px 20px 84px;
+    padding: 33px 0 84px;
 }
 
 .site-header::after {
@@ -68,14 +80,6 @@ ol {
     bottom: 0;
     right: 0;
     opacity: 0.9;
-}
-
-.logo-container,
-.logo-text-container,
-.site-title,
-.links-container {
-    position: relative;
-    z-index: 1;
 }
 
 .site-header .logo-text-container {
@@ -123,8 +127,11 @@ ol {
     color: #ffffff;
     font-size: 8px;
     padding: 0.75em 6.25em 0.75em 10em;
-    margin-top: 1.875em;
     max-width: 320px;
+}
+
+.link-btn + .link-btn {
+    margin-top: 1.875em;
 }
 
 .link-btn .link-sign {
@@ -155,7 +162,7 @@ ol {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 50px;
-    padding: 8px 20px 4px;
+    padding: 8px 0 4px;
 }
 
 .section-steps h3 {
@@ -200,7 +207,7 @@ ol {
 }
 
 .section-steps .step {
-    padding: 52px 20px;
+    padding: 52px 0;
 }
 
 .section-steps .step.connection {
@@ -235,7 +242,7 @@ ol {
 }
 
 .action-description {
-    padding: 30px 20px 76px;
+    padding: 30px 0 76px;
     position: relative;
 }
 
@@ -284,13 +291,10 @@ ol {
 }
 
 .site-footer {
-    height: 568px;
+    /*height: 568px;*/
     background: #0a0e34 url("../images/game_767.jpg") no-repeat top / cover;
     position: relative;
-    padding: 100px 20px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 100px 0 10px;
 }
 
 .site-footer::after {
@@ -302,12 +306,6 @@ ol {
     bottom: 0;
     right: 0;
     opacity: 0.9;
-}
-
-.footer-logo,
-.footer-text {
-    position: relative;
-    z-index: 1;
 }
 
 .footer-logo {
@@ -327,6 +325,10 @@ ol {
     filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.2));
 }
 
+.site-footer .footer-logo {
+    margin-bottom: 54px;
+}
+
 .site-footer .footer-heading {
     color: #ffffff;
     font-size: 32px;
@@ -342,4 +344,20 @@ ol {
     text-align: center;
     text-transform: uppercase;
     line-height: 1.4;
+}
+
+.site-footer .footer-text {
+    margin-top: 1em;
+    margin-bottom: 70px;
+}
+
+.site-footer .logo-text-container {
+    margin-top: 82px;
+}
+
+@media (min-width: 641px) {
+    .container {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
 }
