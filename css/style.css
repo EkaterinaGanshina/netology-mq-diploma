@@ -131,6 +131,11 @@ ol {
     font-size: 8px;
     padding: 0.75em 6.25em 0.75em 10em;
     max-width: 320px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.link-btn:hover {
+    background-color: #3d2b73;
 }
 
 .link-btn:first-child {
@@ -166,6 +171,7 @@ ol {
     font-weight: 700;
     font-size: 50px;
     padding: 8px 0 4px;
+    cursor: default;
 }
 
 .section-steps h3 {
@@ -177,6 +183,7 @@ ol {
     font-size: 23px;
     margin-bottom: 0.77em;
     letter-spacing: 0.045em;
+    cursor: default;
 }
 
 .steps-counter {
@@ -391,13 +398,12 @@ ol {
     .logo-text-container img {
         width: 26.7%;
         min-width: 205px;
-        max-width: 250px;
+        max-width: 230px;
     }
 
     .site-title {
         font-size: 64px;
         margin-left: 54px;
-        margin-top: 0;
     }
 
     .site-title span:last-child {
@@ -478,7 +484,7 @@ ol {
         padding: 32px 0 31px;
     }
 
-    .players .growth .content {
+    .players .step.growth .content {
         font-size: 18px;
     }
 
@@ -517,6 +523,7 @@ ol {
     .actions h3 {
         font-size: 80px;
         margin-bottom: 0.2em;
+        margin-left: -5px;
         letter-spacing: normal;
     }
 
@@ -557,5 +564,260 @@ ol {
 
     .site-footer .logo-text-container {
         margin-top: 56px;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        background: #0a0e34 url(../images/football_1280.jpg) no-repeat top / cover;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        margin-left: 9.5%;
+        margin-right: 9.5%;
+    }
+
+    .athletes .container {
+         margin-left: 52.5%;
+         margin-right: 9.5%;
+    }
+
+    .players .container {
+        margin-left: 9.5%;
+        margin-right: 50%;
+    }
+
+    .site-header {
+        padding: 45px 0 108px;
+        background: #0a0e34 url(../images/football_1920.jpg) no-repeat top / cover;
+    }
+
+    .site-header .logo-text-container {
+        margin-bottom: 18%;
+    }
+
+    .logo-text-container img {
+        width: 12.5%;
+        min-width: 160px;
+        max-width: 192px;
+    }
+
+    .site-title {
+        font-size: 90px;
+        margin-left: 0;
+        line-height: 1
+    }
+
+    .site-title span:last-child {
+        margin-left: 0;
+        text-align: right;
+    }
+
+    .links-container {
+        justify-content: center;
+    }
+
+    .links-container .link-btn:last-child {
+        margin-left: 52px;
+    }
+
+    .site-header .links-container {
+        margin-top: 13.7%;
+    }
+
+    .section-steps h2 {
+        padding: 88px 0 0;
+        letter-spacing: normal;
+    }
+
+    .players h2 {
+        margin-left: -6px;
+    }
+
+    .section-steps h3 {
+        font-size: 36px;
+        margin-bottom: 0.36em;
+    }
+
+    .steps-counter {
+        top: 10px;
+    }
+
+    .section-steps .step {
+        padding: 49px 0 51px;
+    }
+
+    .section-steps .step.connection {
+        padding-top: 76px;
+    }
+
+    .section-steps .content {
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        line-height: 1.44;
+    }
+
+    .athletes .section-img {
+        top: 26px;
+        right: 50.1%;
+    }
+
+    .players .section-img {
+        top: 24px;
+        right: 6.2%;
+    }
+
+    .players .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .players .step.collaboration {
+        padding: 50px 0 81px;
+    }
+
+    .players .step.collaboration h3 {
+        margin-bottom: 0.68em;
+    }
+
+    .players .content {
+        letter-spacing: 0.045em;
+    }
+
+    .players .step.growth {
+        background-color: #0a0e34;
+        padding-bottom: 52px;
+    }
+
+    .players .step.growth .steps-counter {
+        color: #9173e6;
+    }
+
+    .players .step.growth h3 {
+        margin-bottom: 0.45em;
+    }
+
+    .players .step.growth .content {
+        font-size: 20px;
+        letter-spacing: 0.015em;
+    }
+
+    .actions-counter {
+        width: 168px;
+        height: 154px;
+        top: -25px;
+        left: -84px;
+    }
+
+    .section-actions .action {
+        display: flex;
+    }
+
+    .section-actions .action:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .section-actions .action:nth-child(even) .actions-counter {
+        right: -84px;
+        left: auto;
+    }
+
+    .actions .container {
+        margin-left: 13.25%;
+        margin-right: 19%;
+    }
+
+    .actions .action:nth-child(even) .container {
+        margin-left: 20%;
+        margin-right: 12%;
+    }
+
+    .actions picture {
+        flex: 0 0 50%;
+        height: 37.7vw;
+    }
+
+    .actions img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .actions .action-description {
+        margin: auto 0;
+        padding: 0 0 6px;
+        flex: 1 0 50%;
+    }
+
+    .actions h3 {
+        margin-bottom: 95px;
+    }
+
+    .actions-counter {
+        padding-top: 58px;
+    }
+
+    .actions-counter::after {
+        top: 88px;
+    }
+
+    .actions .content {
+        letter-spacing: 0.045em;
+    }
+
+    .actions .action.find-contact .action-description {
+        padding-bottom: 45px;
+    }
+
+    .actions .action.find-contact h3 {
+        margin-left: -4px;
+        margin-bottom: 53px;
+    }
+
+    .actions .action.work-it .action-description {
+        padding-bottom: 0;
+        padding-top: 16px;
+    }
+
+    .actions .action.work-it .actions-counter {
+        top: -9px;
+    }
+
+    .site-footer {
+        padding: 224px 0 52px;
+    }
+
+    .footer-slogan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 9.7%;
+    }
+
+    .site-footer .footer-logo {
+        margin: 0 30px 0 0;
+    }
+
+    .site-footer .footer-text {
+        margin: 0;
+    }
+
+    .site-footer .footer-heading,
+    .site-footer .footer-description {
+        text-align: left;
+    }
+
+    .site-footer .footer-description {
+        font-size: 30px;
+        margin-left: 4px;
+        line-height: 1;
+        margin-bottom: 6px;
+        letter-spacing: normal;
+    }
+
+    .site-footer .logo-text-container {
+        margin-top: 16.8%;
     }
 }
