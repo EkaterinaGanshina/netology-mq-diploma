@@ -138,8 +138,8 @@ ol {
     background-color: #3d2b73;
 }
 
-.link-btn:first-child {
-    margin-top: 1.875em;
+.link-btn:last-child {
+    margin-top: 15px;
 }
 
 .link-btn .link-sign {
@@ -181,8 +181,8 @@ ol {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 23px;
-    margin-bottom: 0.77em;
-    letter-spacing: 0.045em;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
     cursor: default;
 }
 
@@ -199,26 +199,26 @@ ol {
 .steps-counter::after {
     content: "";
     background-color: #5e42b0;
-    width: 1.28em;
+    width: 18px;
     height: 4px;
     border-radius: 2px;
     position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     left: 0;
 }
 
 .section-steps .steps {
-    margin-top: 215px;
+    margin-top: 214px;
 }
 
 .section-steps .content {
     font-size: 15px;
     line-height: 1.2;
-    letter-spacing: 0.048em;
+    letter-spacing: 0.8px;
 }
 
 .section-steps .step {
-    padding: 52px 0;
+    padding: 51px 0 52px;
 }
 
 .section-steps .step.connection {
@@ -230,8 +230,12 @@ ol {
     background-color: #f5f4f9;
 }
 
-.section-steps .step.growth {
+.athletes .step.growth {
     background-color: #5e42b0;
+}
+
+.players .step.growth {
+    background-color: #090c35;
 }
 
 .section-steps .step.growth h3 {
@@ -240,6 +244,14 @@ ol {
 
 .section-steps .step.growth .content {
     color: #ffffff;
+}
+
+.athletes .step.growth .steps-counter {
+    color: #000000;
+}
+
+.players .step.growth .steps-counter {
+    color: #8765dd;
 }
 
 .section-steps .step.growth .steps-counter::after {
@@ -263,14 +275,14 @@ ol {
     color: #e7e7e7;
     line-height: 1.24;
     text-transform: uppercase;
-    margin-bottom: 0.36em;
-    letter-spacing: 0.045em;
+    margin-bottom: 11px;
+    letter-spacing: 1.2px;
 }
 
 .actions .content {
     font-size: 16px;
     line-height: 1.25;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.75px;
 }
 
 .actions-counter {
@@ -302,7 +314,6 @@ ol {
 }
 
 .site-footer {
-    /*height: 568px;*/
     background: #0a0e34 url("../images/game_767.jpg") no-repeat top / cover;
     position: relative;
     padding: 100px 0 10px;
@@ -359,9 +370,12 @@ ol {
     cursor: default;
 }
 
-.site-footer .footer-text {
-    margin-top: 1em;
+.site-footer .footer-slogan {
     margin-bottom: 70px;
+}
+
+.site-footer .footer-text {
+    margin-top: 15px;
 }
 
 .site-footer .logo-text-container {
@@ -412,7 +426,7 @@ ol {
     }
 
     .site-header .links-container {
-        margin-top: 297px;
+        margin-top: 294px;
     }
 
     .links-container {
@@ -433,7 +447,7 @@ ol {
         line-height: 1.2;
     }
 
-    .link-btn:first-child {
+    .link-btn:last-child {
         margin-top: 0;
     }
 
@@ -441,7 +455,7 @@ ol {
         padding-left: 68px;
         padding-top: 8px;
         padding-bottom: 6px;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.75px;
     }
 
     .section-steps h2 {
@@ -452,7 +466,8 @@ ol {
     .section-steps h3 {
         font-size: 32px;
         padding-left: 30px;
-        margin-bottom: 0.55em;
+        margin-bottom: 16px;
+        letter-spacing: 1.75px
     }
 
     .steps-counter {
@@ -493,6 +508,10 @@ ol {
         background-color: #ffffff;
     }
 
+    .section-steps .step.collaboration {
+        padding-bottom: 33px;
+    }
+
     .players .section-img {
         transform: none;
         top: 38px;
@@ -504,7 +523,7 @@ ol {
         width: 116px;
         height: 116px;
         left: 32px;
-        top: -80px;
+        top: -90px;
         font-size: 24px;
         padding-top: 40px;
     }
@@ -516,13 +535,9 @@ ol {
         margin-left: -11px;
     }
 
-    .action-description {
-        padding: 64px 0 100px;
-    }
-
     .actions h3 {
         font-size: 80px;
-        margin-bottom: 0.2em;
+        margin-bottom: 18px;
         margin-left: -5px;
         letter-spacing: normal;
     }
@@ -530,6 +545,23 @@ ol {
     .actions .content {
         font-size: 24px;
         line-height: 1.17;
+        letter-spacing: 1.15px;
+    }
+
+    .actions .be-active .action-description {
+        padding: 64px 0 98px;
+    }
+
+    .actions .find-contact .action-description {
+        padding: 54px 0 106px;
+    }
+
+    .actions .work-it .action-description {
+        padding: 59px 0 111px;
+    }
+
+    .actions .work-it h3 {
+        margin-bottom: 15px;
     }
 
     .site-footer {
@@ -550,16 +582,19 @@ ol {
     .site-footer .footer-heading {
         font-size: 80px;
         line-height: 1.25;
-        letter-spacing: 0.04em;
+        letter-spacing: 3.5px;
+        white-space: nowrap;
     }
 
     .site-footer .footer-description {
         font-size: 34px;
-        letter-spacing: 0.036em;
+        letter-spacing: 1.2px;
+        white-space: nowrap;
+        line-height: 1.25;
     }
 
-    .site-footer .footer-text {
-        margin-bottom: 278px;
+    .site-footer .footer-slogan {
+        margin-bottom: 280px;
     }
 
     .site-footer .logo-text-container {
@@ -571,9 +606,13 @@ ol {
     .site-header {
         background: #0a0e34 url(../images/football_1280.jpg) no-repeat top / cover;
     }
+
+    .site-footer {
+        background: #0a0e34 url(../images/game_1280.jpg) no-repeat top / cover;
+    }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .container {
         margin-left: 9.5%;
         margin-right: 9.5%;
@@ -628,17 +667,21 @@ ol {
     }
 
     .section-steps h2 {
-        padding: 88px 0 0;
         letter-spacing: normal;
     }
 
+    .athletes h2 {
+        padding: 88px 0 0;
+    }
+
     .players h2 {
+        padding: 91px 0 0;
         margin-left: -6px;
     }
 
     .section-steps h3 {
         font-size: 36px;
-        margin-bottom: 0.36em;
+        margin-bottom: 14px;
     }
 
     .steps-counter {
@@ -650,13 +693,21 @@ ol {
     }
 
     .section-steps .step.connection {
-        padding-top: 76px;
+        padding-top: 72px;
     }
 
     .section-steps .content {
         font-size: 20px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.9px;
         line-height: 1.44;
+    }
+
+    .athletes .step.collaboration {
+        padding-bottom: 53px;
+    }
+
+    .athletes .step.collaboration h3 {
+        margin-bottom: 15px;
     }
 
     .athletes .section-img {
@@ -675,15 +726,15 @@ ol {
     }
 
     .players .step.collaboration {
-        padding: 50px 0 81px;
+        padding: 49px 0 80px;
     }
 
     .players .step.collaboration h3 {
-        margin-bottom: 0.68em;
+        margin-bottom: 23px;
     }
 
     .players .content {
-        letter-spacing: 0.045em;
+        letter-spacing: 0.9px;
     }
 
     .players .step.growth {
@@ -691,17 +742,13 @@ ol {
         padding-bottom: 52px;
     }
 
-    .players .step.growth .steps-counter {
-        color: #9173e6;
-    }
-
     .players .step.growth h3 {
-        margin-bottom: 0.45em;
+        margin-bottom: 16px;
     }
 
     .players .step.growth .content {
         font-size: 20px;
-        letter-spacing: 0.015em;
+        letter-spacing: 0.3px;
     }
 
     .actions-counter {
@@ -745,14 +792,10 @@ ol {
         object-fit: cover;
     }
 
-    .actions .action-description {
-        margin: auto 0;
-        padding: 0 0 6px;
+    .actions .action .action-description {
+        margin: 236px 0 30px;
+        padding: 0;
         flex: 1 0 50%;
-    }
-
-    .actions h3 {
-        margin-bottom: 95px;
     }
 
     .actions-counter {
@@ -764,11 +807,15 @@ ol {
     }
 
     .actions .content {
-        letter-spacing: 0.045em;
+        letter-spacing: 1px;
     }
 
-    .actions .action.find-contact .action-description {
-        padding-bottom: 45px;
+    .actions .action.be-active h3 {
+        margin-bottom: 95px;
+    }
+
+    .actions .action.work-it h3 {
+        margin-bottom: 87px;
     }
 
     .actions .action.find-contact h3 {
@@ -776,20 +823,12 @@ ol {
         margin-bottom: 53px;
     }
 
-    .actions .action.work-it .action-description {
-        padding-bottom: 0;
-        padding-top: 16px;
-    }
-
-    .actions .action.work-it .actions-counter {
-        top: -9px;
-    }
-
     .site-footer {
         padding: 224px 0 52px;
+        background: #0a0e34 url(../images/game_1920.jpg) no-repeat top / cover;
     }
 
-    .footer-slogan {
+    .site-footer .footer-slogan {
         display: flex;
         justify-content: center;
         align-items: center;
