@@ -50,6 +50,7 @@ ol {
 .img-responsive {
     display: block;
     max-width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -78,7 +79,7 @@ ol {
 }
 
 .site-header .logo-text-container {
-    margin-bottom: 128px;
+    margin-bottom: 129px;
 }
 
 .logo-text-container img {
@@ -96,7 +97,7 @@ ol {
     color: #ffffff;
     text-transform: uppercase;
     line-height: 1.23;
-    letter-spacing: 0.045em;
+    letter-spacing: 1.25px;
     margin: 0.5em 0;
     cursor: default;
 }
@@ -107,7 +108,7 @@ ol {
 
 .site-title span:last-child {
     margin-left: 44px;
-    margin-top: 16px;
+    margin-top: 17px;
     word-spacing: 1px;
 }
 
@@ -138,6 +139,11 @@ ol {
     background-color: #3d2b73;
 }
 
+.link-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #3d2b73;
+}
+
 .link-btn:last-child {
     margin-top: 15px;
 }
@@ -146,13 +152,24 @@ ol {
     padding-left: 30px;
     display: inline-block;
     vertical-align: middle;
+    position: relative;
 }
 
-.link-btn.app-store .link-sign {
+.link-btn .link-sign::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 30px;
+    height: 22px;
+}
+
+.link-btn.app-store .link-sign::after {
     background: url("../images/svg/apple_logo.svg") no-repeat left center;
 }
 
-.link-btn.google-play .link-sign {
+.link-btn.google-play .link-sign::after {
     background: url("../images/svg/google-play.svg") no-repeat left center;
 }
 
@@ -163,6 +180,10 @@ ol {
 
 .section-steps {
     position: relative;
+}
+
+.players {
+    overflow: hidden;
 }
 
 .section-steps h2 {
@@ -208,22 +229,26 @@ ol {
 }
 
 .section-steps .steps {
-    margin-top: 214px;
+    margin-top: 215px;
 }
 
 .section-steps .content {
     font-size: 15px;
     line-height: 1.2;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.75px;
 }
 
 .section-steps .step {
-    padding: 51px 0 52px;
+    padding: 51px 0 53px;
 }
 
 .section-steps .step.connection {
-    padding-top: 86px;
+    padding: 85px 0 55px;
     background-color: #fafafa;
+}
+
+.section-steps .step.connection h3 {
+    margin-bottom: 16px;
 }
 
 .section-steps .step.collaboration {
@@ -265,7 +290,7 @@ ol {
 }
 
 .action-description {
-    padding: 30px 0 76px;
+    padding: 26px 0 77px;
     position: relative;
 }
 
@@ -275,7 +300,7 @@ ol {
     color: #e7e7e7;
     line-height: 1.24;
     text-transform: uppercase;
-    margin-bottom: 11px;
+    margin-bottom: 15px;
     letter-spacing: 1.2px;
 }
 
@@ -313,10 +338,19 @@ ol {
     border-radius: 2px;
 }
 
+.action.find-contact .action-description {
+    padding: 29px 0 78px;
+}
+
+.action.work-it .action-description {
+    padding: 29px 0 67px;
+}
+
 .site-footer {
     background: #0a0e34 url("../images/game_767.jpg") no-repeat top / cover;
     position: relative;
     padding: 100px 0 10px;
+    overflow: hidden;
 }
 
 .site-footer::after {
@@ -334,7 +368,7 @@ ol {
     background: #5e42b0 linear-gradient(to bottom, #7655d6, #503799);
     width: 72px;
     height: 74px;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 12px 8px;
     text-align: center;
     margin: 0 auto;
@@ -348,7 +382,7 @@ ol {
 }
 
 .site-footer .footer-logo {
-    margin-bottom: 54px;
+    margin-bottom: 48px;
 }
 
 .site-footer .footer-heading {
@@ -357,8 +391,9 @@ ol {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    line-height: 1.3;
     cursor: default;
+    white-space: nowrap;
+    letter-spacing: 1.5px;
 }
 
 .site-footer .footer-description {
@@ -368,10 +403,12 @@ ol {
     text-transform: uppercase;
     line-height: 1.4;
     cursor: default;
+    white-space: nowrap;
+    letter-spacing: 0.75px;
 }
 
 .site-footer .footer-slogan {
-    margin-bottom: 70px;
+    margin-bottom: 73px;
 }
 
 .site-footer .footer-text {
@@ -389,7 +426,12 @@ ol {
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
+    .link-btn .link-sign::after {
+        width: 40px;
+        height: 45px;
+    }
+
     .athletes .container {
         margin-left: 38%;
         margin-right: 32px;
@@ -418,6 +460,7 @@ ol {
     .site-title {
         font-size: 64px;
         margin-left: 54px;
+        letter-spacing: 3px;
     }
 
     .site-title span:last-child {
@@ -426,7 +469,7 @@ ol {
     }
 
     .site-header .links-container {
-        margin-top: 294px;
+        margin-top: 297px;
     }
 
     .links-container {
@@ -477,11 +520,13 @@ ol {
     .steps-counter::after {
         bottom: -10px;
         height: 5px;
+        width: 22px;
     }
 
     .section-steps .content {
         font-size: 16px;
         line-height: 1.75;
+        letter-spacing: 0.8px;
     }
 
     .athletes .section-img {
@@ -501,42 +546,46 @@ ol {
 
     .players .step.growth .content {
         font-size: 18px;
+        line-height: 1.65;
     }
 
     .section-steps .step.connection {
-        padding-top: 28px;
+        padding: 28px 0 32px;
         background-color: #ffffff;
     }
 
+    .players .step.connection h3 {
+        margin-bottom: 17px;
+    }
+
     .section-steps .step.collaboration {
-        padding-bottom: 33px;
+        padding: 32px 0 34px;
     }
 
     .players .section-img {
         transform: none;
         top: 38px;
-        left: auto;
-        right: 0;
+        left: 48%;
     }
 
     .actions-counter {
         width: 116px;
         height: 116px;
-        left: 32px;
+        left: 34px;
         top: -90px;
         font-size: 24px;
-        padding-top: 40px;
+        padding-top: 39px;
     }
 
     .actions-counter::after {
-        width: 22px;
+        width: 24px;
         height: 5px;
         top: 70px;
-        margin-left: -11px;
+        margin-left: -12px;
     }
 
     .actions h3 {
-        font-size: 80px;
+        font-size: 60px;
         margin-bottom: 18px;
         margin-left: -5px;
         letter-spacing: normal;
@@ -544,24 +593,25 @@ ol {
 
     .actions .content {
         font-size: 24px;
-        line-height: 1.17;
-        letter-spacing: 1.15px;
+        line-height: 1.16;
+        letter-spacing: 1.2px;
     }
 
     .actions .be-active .action-description {
-        padding: 64px 0 98px;
+        padding: 68px 0 98px;
     }
 
     .actions .find-contact .action-description {
-        padding: 54px 0 106px;
+        padding: 57px 0 106px;
     }
 
     .actions .work-it .action-description {
-        padding: 59px 0 111px;
+        padding: 58px 0 115px;
     }
 
     .actions .work-it h3 {
         margin-bottom: 15px;
+        margin-left: 0;
     }
 
     .site-footer {
@@ -580,17 +630,15 @@ ol {
     }
 
     .site-footer .footer-heading {
-        font-size: 80px;
+        font-size: 60px;
         line-height: 1.25;
         letter-spacing: 3.5px;
-        white-space: nowrap;
     }
 
     .site-footer .footer-description {
-        font-size: 34px;
+        font-size: 30px;
         letter-spacing: 1.2px;
-        white-space: nowrap;
-        line-height: 1.25;
+        line-height: 1.3;
     }
 
     .site-footer .footer-slogan {
@@ -610,9 +658,40 @@ ol {
     .site-footer {
         background: #0a0e34 url(../images/game_1280.jpg) no-repeat top / cover;
     }
+
+    .players .section-img {
+        transform: none;
+        top: 38px;
+        left: auto;
+        right: 0;
+    }
+
+    .actions h3 {
+        font-size: 80px;
+    }
+
+    .site-footer .footer-heading {
+        font-size: 80px;
+    }
+
+    .site-footer .footer-description {
+        font-size: 34px;
+    }
+
+    .links-container {
+        justify-content: center;
+    }
+
+    .links-container .link-btn {
+        padding-left: 56px;
+    }
+
+    .links-container .link-btn:last-child {
+        margin-left: 52px;
+    }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .container {
         margin-left: 9.5%;
         margin-right: 9.5%;
@@ -646,20 +725,13 @@ ol {
     .site-title {
         font-size: 90px;
         margin-left: 0;
-        line-height: 1
+        line-height: 1;
+        letter-spacing: 4.25px;
     }
 
     .site-title span:last-child {
         margin-left: 0;
         text-align: right;
-    }
-
-    .links-container {
-        justify-content: center;
-    }
-
-    .links-container .link-btn:last-child {
-        margin-left: 52px;
     }
 
     .site-header .links-container {
@@ -713,11 +785,13 @@ ol {
     .athletes .section-img {
         top: 26px;
         right: 50.1%;
+        left: auto;
     }
 
     .players .section-img {
-        top: 24px;
-        right: 6.2%;
+        top: -14px;
+        right: auto;
+        left: 43%;
     }
 
     .players .container {
@@ -752,32 +826,49 @@ ol {
     }
 
     .actions-counter {
-        width: 168px;
-        height: 154px;
-        top: -25px;
-        left: -84px;
+        width: 136px;
+        height: 128px;
+        top: -22px;
+        left: -68px;
+        padding-top: 44px;
+    }
+
+    .actions-counter::after {
+        top: 72px;
+        width: 26px;
+        margin-left: -14px;
+    }
+
+    .action:nth-child(even) .actions-counter {
+        right: -68px;
+        left: auto;
     }
 
     .section-actions .action {
         display: flex;
     }
 
+    .actions h3 {
+        line-height: 1.1;
+        font-size: 64px;
+        margin-bottom: 43px;
+    }
+
+    .actions .work-it h3 {
+        margin-bottom: 43px;
+    }
+
     .section-actions .action:nth-child(even) {
         flex-direction: row-reverse;
     }
 
-    .section-actions .action:nth-child(even) .actions-counter {
-        right: -84px;
-        left: auto;
-    }
-
     .actions .container {
-        margin-left: 13.25%;
-        margin-right: 19%;
+        margin-left: 20%;
+        margin-right: 12%;
     }
 
     .actions .action:nth-child(even) .container {
-        margin-left: 20%;
+        margin-left: 12%;
         margin-right: 12%;
     }
 
@@ -793,34 +884,14 @@ ol {
     }
 
     .actions .action .action-description {
-        margin: 236px 0 30px;
+        margin: 60px 0 20px;
         padding: 0;
         flex: 1 0 50%;
     }
 
-    .actions-counter {
-        padding-top: 58px;
-    }
-
-    .actions-counter::after {
-        top: 88px;
-    }
-
     .actions .content {
         letter-spacing: 1px;
-    }
-
-    .actions .action.be-active h3 {
-        margin-bottom: 95px;
-    }
-
-    .actions .action.work-it h3 {
-        margin-bottom: 87px;
-    }
-
-    .actions .action.find-contact h3 {
-        margin-left: -4px;
-        margin-bottom: 53px;
+        font-size: 20px;
     }
 
     .site-footer {
@@ -836,7 +907,8 @@ ol {
     }
 
     .site-footer .footer-logo {
-        margin: 0 30px 0 0;
+        margin: 0 27px 0 0;
+        flex-shrink: 0;
     }
 
     .site-footer .footer-text {
@@ -858,5 +930,107 @@ ol {
 
     .site-footer .logo-text-container {
         margin-top: 16.8%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .players .section-img {
+        top: 24px;
+        right: auto;
+        left: 43%;
+    }
+
+    .actions .container {
+        margin-left: 18%;
+        margin-right: 14%;
+    }
+
+    .actions .action:nth-child(even) .container {
+        margin-left: 14%;
+        margin-right: 18%;
+    }
+
+    .actions h3 {
+        font-size: 80px;
+    }
+
+    .actions-counter {
+        width: 168px;
+        height: 154px;
+        top: -20px;
+        left: -84px;
+        padding-top: 58px;
+    }
+
+    .actions-counter::after {
+        top: 88px;
+    }
+
+    .action:nth-child(even) .actions-counter {
+        right: -84px;
+        left: auto;
+    }
+
+    .actions .action.be-active h3 {
+        margin-bottom: 89px;
+    }
+
+    .actions .action.work-it h3 {
+        margin-bottom: 83px;
+    }
+
+    .actions .action.find-contact h3 {
+        margin-left: -4px;
+        margin-bottom: 48px;
+    }
+
+    .actions .action .action-description {
+        margin: 120px 0 30px;
+    }
+
+    .actions .content {
+        font-size: 24px;
+        letter-spacing: 1.1px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .section-steps .step.connection {
+        padding: 72px 0 50px;
+    }
+
+    .athletes .step.collaboration {
+        padding: 47px 0 53px;
+    }
+
+    .players .step.growth {
+        padding-top: 48px;
+    }
+
+    .players .step.growth h3 {
+        margin-bottom: 13px;
+    }
+
+    .players .section-img {
+        top: 22px;
+        left: 41.8%;
+    }
+
+    .actions .container {
+        margin-left: 13.25%;
+        margin-right: 19%;
+    }
+
+    .actions .action:nth-child(even) .container {
+        margin-left: 20%;
+        margin-right: 12%;
+    }
+
+    .actions h3 {
+        line-height: normal;
+    }
+
+    .actions .action .action-description {
+        margin: 229px 0 30px;
     }
 }
